@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/catalog-micro-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/catalog-micro-service.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/e-commerce-msa.iml" filepath="$PROJECT_DIR$/.idea/e-commerce-msa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/user-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/user-service.main.iml" />
     </modules>
   </component>
 </project>
