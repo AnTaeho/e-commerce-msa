@@ -8,7 +8,6 @@ import org.springframework.core.env.Environment;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.ProviderManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configurers.CsrfConfigurer;
 import org.springframework.security.config.annotation.web.configurers.HeadersConfigurer.FrameOptionsConfig;
@@ -39,7 +38,11 @@ public class SecurityConfig {
     }
 
     private AuthenticationFilter getAuthenticationFilter() {
-        return new AuthenticationFilter(authenticationManager());
+        return new AuthenticationFilter(
+                authenticationManager(),
+                userService,
+                env
+        );
     }
 
     @Bean
